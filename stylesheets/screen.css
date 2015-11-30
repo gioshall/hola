@@ -288,7 +288,7 @@ body {
   background-position: 0 -150px;
 }
 #footer p {
-  padding: 0 10%;
+  padding: 0 10% 10px;
   font-size: 11px;
   line-height: 15px;
 }

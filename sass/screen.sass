@@ -5,11 +5,48 @@
 body
 	margin: 0
 	padding: 0
-
+	font-family: helvetica, "LiHei Pro", "Heiti TC", "微軟正黑體"
 
 #header
 	height: 50px
 	background-color: #8b5c06
+	position: relative
+	.logo
+		width: 65px
+		height: 50px
+		position: relative
+		margin: auto
+		a
+			display: block
+			width: 65px
+			height: 50px
+			background-size: 100%
+			+bg(logo-hola,png)
+	ul	
+		position: absolute
+		bottom: 0
+		height: 40px
+		&.menu-left
+			left: 5px
+		&.menu-right
+			right: 5px	
+		li
+			width: 30px
+			height: 30px
+			margin: 5px 0px
+			display: inline-block
+			background-size: 60px 150px
+			+bg(icon-header,svg)
+			&.header-menu
+				background-position: 0 0
+			&.header-search
+				background-position: 0 -30px
+			&.header-login
+				background-position: 0 -60px
+			&.header-order
+				background-position: 0 -90px
+			&.header-cart
+				background-position: 0 -120px
 
 .sub-nav
 	height: 50px
@@ -22,7 +59,80 @@ body
 		height: 50px
 		h2
 			font-size: 12px
-			line-height: 50px
+			line-height: 25px
+			margin-top: 12px
+			padding-left: 20px
+			background-size: 25px 300px
+			+bg(icon-sub,svg)
+			&.nav-news
+				background-position: 2px 0
+			&.nav-coupon
+				background-position: 2px -25px
+			&.nav-store
+				background-position: 2px -50px
+			&.nav-dm
+				background-position: 2px -75px
+
+#content
+	.highlight
+		position: relative
+		margin-bottom: 30px
+		ul
+			width: 100%
+			font-size: 0
+			position: relative
+			li
+				display: inline-block
+				a,
+				img
+					width: 100%
+				&.highlight-sub01,
+				&.highlight-sub02
+					width: 48%
+				&.highlight-sub01
+					margin: 10px 0 0 0
+				&.highlight-sub02
+					margin: 10px 0 0 4%
+	.daily-select
+		width: 100%
+		position: relative
+		a,
+		img
+			width: 100%
+			display: block
+			text-decoration: none
+		.daily-info
+			height: 40px
+			line-height: 40px
+			background-color: #ece7de
+			position: relative
+			span
+				color: #b72600
+				font-size: 10px
+				line-height: 15px
+				border: 1px #b72600 solid
+				display: inline-block
+				margin: 0 2px 0 5px
+				padding: 2px 4px
+				+border-radius(3px)
+			h2
+				display: inline-block
+				font-size: 12px
+				color: #000
+			.price
+				position: absolute
+				top: 0
+				right: 0
+				background-color: #b72600
+				color: #fff
+				font-size: 18px
+				font-weight: bold
+				padding: 0 8px
+
 
 .footer
 	background-color: #394166
+	color: #fff
+	p
+		padding: 0 10%
+		font-size: 9px

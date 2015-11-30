@@ -289,9 +289,10 @@ body {
 }
 #footer p {
   padding: 0 10%;
-  font-size: 9px;
-  line-height: 12px;
+  font-size: 11px;
+  line-height: 15px;
 }
 #footer p span {
+  font-size: 9px;
   display: block;
 }

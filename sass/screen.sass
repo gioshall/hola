@@ -62,16 +62,28 @@ body
 			line-height: 25px
 			margin-top: 12px
 			padding-left: 20px
-			background-size: 25px 300px
-			+bg(icon-sub,svg)
+			position: relative	
+			&:before
+				content: ''
+				width: 25px
+				height: 25px
+				position: absolute
+				top: 0
+				left: 0
+				background-size: 25px 300px
+				+bg(icon-sub,svg)
 			&.nav-news
-				background-position: 2px 0
+				&:before
+					background-position: 2px 0
 			&.nav-coupon
-				background-position: 2px -25px
+				&:before
+					background-position: 2px -25px
 			&.nav-store
-				background-position: 2px -50px
+				&:before
+					background-position: 2px -50px
 			&.nav-dm
-				background-position: 2px -75px
+				&:before
+					background-position: 2px -75px
 
 #content
 	.highlight

@@ -132,20 +132,29 @@ body {
   line-height: 25px;
   margin-top: 12px;
   padding-left: 20px;
+  position: relative;
+}
+.sub-nav li h2:before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-size: 25px 300px;
   background-image: url("../img/icon-sub.svg");
   background-repeat: no-repeat;
 }
-.sub-nav li h2.nav-news {
+.sub-nav li h2.nav-news:before {
   background-position: 2px 0;
 }
-.sub-nav li h2.nav-coupon {
+.sub-nav li h2.nav-coupon:before {
   background-position: 2px -25px;
 }
-.sub-nav li h2.nav-store {
+.sub-nav li h2.nav-store:before {
   background-position: 2px -50px;
 }
-.sub-nav li h2.nav-dm {
+.sub-nav li h2.nav-dm:before {
   background-position: 2px -75px;
 }
 

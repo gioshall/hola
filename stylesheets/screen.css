@@ -140,7 +140,7 @@ body {
   height: 25px;
   position: absolute;
   top: 0;
-  left: 0;
+  margin-left: -25px;
   background-size: 25px 300px;
   background-image: url("../img/icon-sub.svg");
   background-repeat: no-repeat;

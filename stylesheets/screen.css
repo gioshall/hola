@@ -236,6 +236,7 @@ body {
   font-size: 15px;
   line-height: 40px;
   margin-top: 10px;
+  font-weight: bold;
 }
 #content .promote ul {
   position: relative;
@@ -262,6 +263,7 @@ body {
 }
 #footer .link {
   text-align: center;
+  margin: 5px 0;
 }
 #footer .link li {
   display: inline-block;
@@ -288,4 +290,8 @@ body {
 #footer p {
   padding: 0 10%;
   font-size: 9px;
+  line-height: 12px;
+}
+#footer p span {
+  display: block;
 }

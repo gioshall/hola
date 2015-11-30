@@ -226,12 +226,66 @@ body {
   font-weight: bold;
   padding: 0 8px;
 }
+#content .promote {
+  width: 95%;
+  position: relative;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+#content .promote h2 {
+  font-size: 15px;
+  line-height: 40px;
+  margin-top: 10px;
+}
+#content .promote ul {
+  position: relative;
+  font-size: 0;
+}
+#content .promote ul li {
+  display: inline-block;
+  width: 48%;
+}
+#content .promote ul li a,
+#content .promote ul li img {
+  width: 100%;
+}
+#content .promote ul li:nth-of-type(odd) {
+  margin: 0 0 10px 0;
+}
+#content .promote ul li:nth-of-type(even) {
+  margin: 0 0 10px 4%;
+}
 
-.footer {
+#footer {
   background-color: #394166;
   color: #fff;
 }
-.footer p {
+#footer .link {
+  text-align: center;
+}
+#footer .link li {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+#footer .link li a {
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-size: 50px 200px;
+  background-image: url("../img/icon-footer.svg");
+  background-repeat: no-repeat;
+}
+#footer .link li.desktop a {
+  background-position: 0 -50px;
+}
+#footer .link li.mobile a {
+  background-position: 0 -100px;
+}
+#footer .link li.facebook a {
+  background-position: 0 -150px;
+}
+#footer p {
   padding: 0 10%;
   font-size: 9px;
 }

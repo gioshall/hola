@@ -140,11 +140,55 @@ body
 				font-size: 18px
 				font-weight: bold
 				padding: 0 8px
+	.promote
+		width: 95%
+		position: relative
+		margin: 0 auto 20px
+		text-align: center
+		h2
+			font-size: 15px
+			line-height: 40px
+			margin-top: 10px
+		ul
+			position: relative
+			font-size: 0
+			li
+				display: inline-block
+				width: 48%
+				a,
+				img
+					width: 100%
+				&:nth-of-type(odd)
+					margin: 0 0 10px 0
+				&:nth-of-type(even)
+					margin: 0 0 10px 4%
 
 
-.footer
+
+#footer
 	background-color: #394166
 	color: #fff
+	.link
+		text-align: center
+		li
+			display: inline-block
+			width: 50px
+			height: 50px
+			a
+				width: 50px
+				height: 50px
+				display: block
+				background-size: 50px 200px
+				+bg(icon-footer,svg)
+			&.desktop
+				a
+					background-position: 0 -50px
+			&.mobile
+				a
+					background-position: 0 -100px
+			&.facebook
+				a
+					background-position: 0 -150px
 	p
 		padding: 0 10%
 		font-size: 9px

@@ -2,34 +2,40 @@
 @import compass/css3
 @import mixin
 
+html
+	overflow: hidden
+
 body
 	margin: 0
 	padding: 0
-	width: 100%
 	overflow-x: hidden
+	background-color: #b59e74
 	font-family: helvetica, "LiHei Pro", "Heiti TC", "Microsoft JhengHei"
 
 #container,
 .menu
-	+transition(0.2s ease-in)
+	+transition(0.2s)
 
 #container
 	position: relative
+	width: 100%
+	z-index: 1
+	background-color: #fff
 	&.show-menu
-		+transform(translateX(240px))
-
+		margin-left: 240px	
 .menu
 	width: 240px
 	height: 100%
 	position: fixed
 	top: 0
-	z-index: 10
+	left: -240px
 	background-color: #b59e74
 	font-size: 18px
 	overflow-y: auto
-	+transform(translateX(-240px))
+	overflow: scroll
+	-webkit-overflow-scrolling: touch
 	&.show-menu
-		+transform(translateX(0px))
+		left: 0px
 	a
 		text-decoration: none
 		color: #222
@@ -65,8 +71,10 @@ body
 
 #header
 	height: 50px
+	width: 100%
 	background-color: #8b5c06
-	position: relative
+	position: fixed
+	z-index: 10
 	.logo
 		width: 65px
 		height: 50px
@@ -105,6 +113,7 @@ body
 				background-position: 0 -120px
 
 .sub-nav
+	padding-top: 50px
 	height: 50px
 	border-bottom: 1px #d7d7d7 solid
 	font-size: 0

@@ -1,3 +1,4 @@
 $('.menu-left .header-menu').click(function(){
-	$('#container, .menu').toggleClass('show-menu')
+	$('#container, .menu').toggleClass('show-menu');
+
 })

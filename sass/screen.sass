@@ -122,10 +122,19 @@ body
 		width: 25%
 		text-align: center
 		height: 50px
+		position: relative
+		a
+			text-decoration: none
+			color: #000
+			display: block
+			height: 50px
+			width: 100%
+		&.acted
+			background-color: #ece7de
 		h2
 			font-size: 12px
 			line-height: 25px
-			margin-top: 12px
+			top: 12px
 			padding-left: 20px
 			position: relative	
 			&:before
@@ -240,7 +249,8 @@ body
 	.filter
 		height: 52px
 		position: relative
-		.list-type
+		.list-type,
+		.store-loc
 			position: absolute
 			left: 10px
 			top: 10px
@@ -257,8 +267,8 @@ body
 				&.selected
 					&:after
 						position: absolute
-						width: 30px
-						height: 30px
+						width: 100%
+						height: 100%
 						top: 0
 						left: 0
 						content: ''
@@ -270,6 +280,18 @@ body
 					background-position: 0 -420px
 				&:nth-of-type(2)
 					margin-left: -1px
+		.store-loc
+			width: 95%
+			position: relative
+			margin: auto
+			left: 0
+			text-align: center
+			li
+				width: 24%
+				font-size: 12px
+				line-height: 30px
+				background-image: none
+				margin-left: -1px
 		select
 			position: absolute
 			right: 10px
@@ -294,17 +316,8 @@ body
 						color: #363636
 						margin-right: 3px
 				h2
-					font-size: 13px
 					font-weight: bold
 					color: #8b5c06
-					line-height: 20px
-					min-height: 80px
-					height: 80px
-					overflow: hidden
-					text-overflow: ellipsis
-					display: -webkit-box
-					-webkit-line-clamp: 4
-					-webkit-box-orient: vertical
 			.item-info
 				position: relative
 		&.pix
@@ -320,7 +333,18 @@ body
 					margin: 0 0 10px 0
 				&:nth-of-type(even)
 					margin: 0 0 10px 4%
-		&.pt
+				h2
+					font-size: 13px
+					line-height: 20px
+					min-height: 80px
+					height: 80px
+					overflow: hidden
+					text-overflow: ellipsis
+					display: -webkit-box
+					-webkit-line-clamp: 4
+					-webkit-box-orient: vertical
+		&.pt,
+		&.store
 			.list-box
 				width: 100%
 				display: block
@@ -338,11 +362,37 @@ body
 					position: absolute
 					bottom: 0
 				h2
-					top: 0
 					font-size: 16px
 					line-height: 23px
 					min-height: 92px
 					height: 92px
+					overflow: hidden
+					text-overflow: ellipsis
+					display: -webkit-box
+					-webkit-line-clamp: 4
+					-webkit-box-orient: vertical
+		&.store
+			.list-box
+				h2
+					padding-top: 15px
+					height: 23px
+					min-height: 23px
+				.address
+					font-size: 10px
+					color: #555
+					margin-top: 5px
+		&.news
+			.list-box
+				width: 90%
+				margin: 10px auto 20px
+				display: block
+				h2
+					font-size: 18px
+					line-height: 24px
+				.date
+					font-size: 10px
+					color: #555
+					margin-top: 5px
 		.load-more
 			color: #b72600
 			width: 90%

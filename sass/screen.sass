@@ -5,7 +5,61 @@
 body
 	margin: 0
 	padding: 0
-	font-family: helvetica, "LiHei Pro", "Heiti TC", "微軟正黑體"
+	font-family: helvetica, "LiHei Pro", "Heiti TC", "Microsoft JhengHei"
+
+#container,
+.menu
+	+transition(0.2s ease-in)
+
+#container
+	position: relative
+	&.show-menu
+		+transform(translateX(240px))
+
+.menu
+	width: 240px
+	height: 100%
+	position: fixed
+	top: 0
+	z-index: 10
+	background-color: #b59e74
+	font-size: 18px
+	overflow-y: auto
+	+transform(translateX(-240px))
+	&.show-menu
+		+transform(translateX(0px))
+	a
+		text-decoration: none
+		color: #222
+	h3
+		display: inline
+		position: relative
+		&:after
+			+bg(icon-sub,svg)
+			background-size: 25px 300px
+			background-position: 0 -250px
+			width: 25px
+			height: 25px
+			content: ''
+			position: absolute
+			top: -3px
+
+	.back
+		line-height: 60px
+		text-align: center
+		border-bottom: 1px #a07d3d solid
+		h3
+			&:after
+				background-position: 0 -275px
+				left: -25px
+	.menu-list
+		margin-top: 10px
+		line-height: 40px
+		li
+			a
+				width: 100%
+				text-indent: 80px
+				display: block
 
 #header
 	height: 50px

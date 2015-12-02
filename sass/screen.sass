@@ -74,6 +74,7 @@ body
 	width: 100%
 	background-color: $primary-color
 	position: fixed
+	overflow: hidden
 	z-index: 10
 	.logo
 		width: 65px
@@ -88,7 +89,7 @@ body
 			+bg(logo-hola,png)
 	ul	
 		position: absolute
-		bottom: 0
+		top: 10px
 		height: 40px
 		&.menu-left
 			left: 5px
@@ -103,20 +104,47 @@ body
 			+bg(icon-header,svg)
 			&.header-menu
 				background-position: 0 0
+				&.show-menu
+					background-position: -30px 0
 			&.header-search
 				background-position: 0 -30px
+				&.show-search
+					background-position: -30px -30px
 			&.header-login
 				background-position: 0 -60px
 			&.header-order
 				background-position: 0 -90px
 			&.header-cart
 				background-position: 0 -120px
+	&.show-search
+		height: 100px
+		+transition(0.2s ease)
+		.search
+			height: 50px
+			text-align: center
+
+			input
+				position: relative
+				width: 90%
+				margin: 6px auto
+				background-color: #fff
+				border: 0
+				height: 25px
+				padding: 5px
+				font-size: 16px
+				color: $color-text
+				+border-radius(2px)
+				&:focus
+					outline: none
 
 .sub-nav
 	padding-top: 50px
 	height: 50px
 	border-bottom: 1px #d7d7d7 solid
 	font-size: 0
+	&.show-search
+		padding-top: 100px
+		+transition(0.2s ease)
 	li
 		display: inline-block
 		width: 25%
@@ -250,7 +278,8 @@ body
 		height: 52px
 		position: relative
 		.list-type,
-		.store-loc
+		.store-loc,
+		.store-coupon
 			position: absolute
 			left: 10px
 			top: 10px
@@ -280,7 +309,8 @@ body
 					background-position: 0 -420px
 				&:nth-of-type(2)
 					margin-left: -1px
-		.store-loc
+		.store-loc,
+		.store-coupon
 			width: 95%
 			position: relative
 			margin: auto
@@ -292,6 +322,12 @@ body
 				line-height: 30px
 				background-image: none
 				margin-left: -1px
+				a
+					text-decoration: none
+					color: #000
+		.store-coupon
+			li
+				//width: 48%
 		select
 			position: absolute
 			right: 10px
@@ -320,6 +356,20 @@ body
 					color: $primary-color
 			.item-info
 				position: relative
+			.buy-btn
+				display: block
+				font-size: 15px
+				color: #fff
+				line-height: 35px
+				text-align: center
+				width: 80px
+				text-decoration: none
+				position: absolute
+				top: 0
+				right: 0
+				background-color: $color-red
+				+border-radius(3px)
+
 		&.pix
 			.list-box
 				width: 48%
@@ -344,7 +394,8 @@ body
 					-webkit-line-clamp: 4
 					-webkit-box-orient: vertical
 		&.pt,
-		&.store
+		&.store,
+		&.dm
 			.list-box
 				width: 100%
 				display: block
@@ -361,6 +412,10 @@ body
 				.price
 					position: absolute
 					bottom: 0
+				.date
+					font-size: 10px
+					color: $color-text
+					margin-top: 5px
 				h2
 					font-size: 16px
 					line-height: 23px
@@ -381,7 +436,25 @@ body
 					font-size: 10px
 					color: $color-text
 					margin-top: 5px
-		&.news
+		&.dm
+			.list-box
+				margin-top: 10px
+				img
+					width: 35%
+				.item-info
+					width: 60%
+				h2
+					padding-top: 15px
+					height: 23px
+					min-height: 23px
+				.date
+					margin-bottom: 10px
+				.dm-info
+					font-size: 13px
+					line-height: 21px
+					color: #000
+		&.news,
+		&.coupon
 			.list-box
 				width: 90%
 				margin: 10px auto 20px
@@ -389,10 +462,11 @@ body
 				h2
 					font-size: 18px
 					line-height: 24px
-				.date
-					font-size: 10px
-					color: $color-text
-					margin-top: 5px
+				
+		&.coupon
+			.list-box
+				h2
+					padding-right: 90px
 		.load-more
 			color: $color-red
 			width: 90%
@@ -556,6 +630,13 @@ body
 						font-size: 25px
 						font-weight: bold
 						padding: 0 3px
+		.dm-cover
+			position: relative
+			width: 100%
+			margin: 15px auto
+			display: block
+			img
+				width: 100%
 
 #footer
 	background-color: $base-color

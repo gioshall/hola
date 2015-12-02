@@ -1,7 +1,11 @@
 $('.menu').load('./menu.html');
 
 $('.menu-left .header-menu').click(function(){
-	$('#container, .menu').toggleClass('show-menu');
+	$('#container, .menu, .menu-left .header-menu').toggleClass('show-menu');
+});
+
+$('.menu-left .header-search').click(function(){
+	$('#header, .sub-nav, .menu-left .header-search').toggleClass('show-search');
 });
 
 $('.list-pix').click(function(){

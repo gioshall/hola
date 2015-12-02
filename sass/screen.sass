@@ -9,7 +9,7 @@ body
 	margin: 0
 	padding: 0
 	overflow-x: hidden
-	background-color: #b59e74
+	background-color: $second-color
 	font-family: helvetica, "LiHei Pro", "Heiti TC", "Microsoft JhengHei"
 
 #container,
@@ -29,7 +29,7 @@ body
 	position: fixed
 	top: 0
 	left: -240px
-	background-color: #b59e74
+	background-color: $second-color
 	font-size: 18px
 	overflow-y: auto
 	overflow: scroll
@@ -72,7 +72,7 @@ body
 #header
 	height: 50px
 	width: 100%
-	background-color: #8b5c06
+	background-color: $primary-color
 	position: fixed
 	z-index: 10
 	.logo
@@ -132,10 +132,10 @@ body
 		&.acted
 			background-color: #ece7de
 		h2
-			font-size: 12px
+			font-size: 13px
 			line-height: 25px
 			top: 12px
-			padding-left: 20px
+			padding-left: 17px
 			position: relative	
 			&:before
 				content: ''
@@ -193,10 +193,10 @@ body
 			background-color: #ece7de
 			position: relative
 			span
-				color: #b72600
+				color: $color-red
 				font-size: 10px
 				line-height: 15px
-				border: 1px #b72600 solid
+				border: 1px $color-red solid
 				display: inline-block
 				margin: 0 2px 0 5px
 				padding: 2px 4px
@@ -209,7 +209,7 @@ body
 				position: absolute
 				top: 0
 				right: 0
-				background-color: #b72600
+				background-color: $color-red
 				color: #fff
 				font-size: 18px
 				font-weight: bold
@@ -242,10 +242,10 @@ body
 		border-bottom: 1px #e2dfdb solid
 		line-height: 40px
 		font-size: 12px
-		color: #8b5c06
+		color: $primary-color
 		padding: 0 10px
 		a
-			color: #8b5c06
+			color: $primary-color
 	.filter
 		height: 52px
 		position: relative
@@ -311,13 +311,13 @@ body
 					font-size: 15px
 					line-height: 30px
 					font-weight: bold
-					color: #b72600
+					color: $color-red
 					del
 						color: #363636
 						margin-right: 3px
 				h2
 					font-weight: bold
-					color: #8b5c06
+					color: $primary-color
 			.item-info
 				position: relative
 		&.pix
@@ -379,7 +379,7 @@ body
 					min-height: 23px
 				.address
 					font-size: 10px
-					color: #555
+					color: $color-text
 					margin-top: 5px
 		&.news
 			.list-box
@@ -391,21 +391,174 @@ body
 					line-height: 24px
 				.date
 					font-size: 10px
-					color: #555
+					color: $color-text
 					margin-top: 5px
 		.load-more
-			color: #b72600
+			color: $color-red
 			width: 90%
 			margin: auto
 			font-size: 15px
 			line-height: 35px
-			border: 1px #b72600 solid
+			border: 1px $color-red solid
 			text-align: center
 			+border-radius(3px)
 
+	.photo-slide
+		width: 100%
+		position: relative
+		img
+			width: 100%
+
+	.product-info
+		width: 270px
+		position: relative
+		margin: auto
+		h1
+			font-size: 18px
+			line-height: 25px
+			color: $primary-color
+			font-weight: bold
+			padding: 10px 0
+		.description
+			color: $color-text
+			font-size: 14px
+			line-height: 22px
+			.store-info
+				li
+					+bg(icon-sub,svg)
+					background-size: 30px 450px
+					line-height: 30px
+					padding-left: 30px
+					&.address
+						background-position: 0 -120px
+					&.phone
+						background-position: 0 -150px
+					&.hours
+						background-position: 0 -180px
+
+		&.warning
+			h1
+				color: $color-red
+				font-size: 28px
+				line-height: 45px
+			.description
+				color: $color-red
+		hr
+			height: 1px
+			border: 0
+			border-top: 1px #d3d3d3 solid
+			display: block
+		.fee-info
+			font-size: 14px
+			line-height: 22px
+			margin: 10px 0
+			padding: 3px 5px
+			background-color: #ece7de
+			display: inline-block
+			+border-radius(3px)
+			a
+				color: $color-red
+				text-decoration: none
+		.price
+			h2
+				text-align: right
+				font-size: 25px
+				line-height: 40px
+				font-weight: bold
+				span
+					font-size: 12px
+					line-height: 18px
+					display: inline-block
+					margin: 0 5px
+					padding: 2px 6px
+					vertical-align: middle
+					+border-radius(3px)
+			.fee-range
+				float: left
+				font-size: 19px
+				font-weight: bold
+				line-height: 45px
+				color: $primary-color
+
+			.buy-btn
+				a
+					display: block
+					font-size: 18px
+					color: #fff
+					margin: 10px auto
+					line-height: 50px
+					text-align: center
+					text-decoration: none
+					+border-radius(3px)
+			&.web
+				h2
+					color: $color-red
+					span
+						color: $color-red
+						border: 1px $color-red solid
+				.buy-btn
+					a
+						background-color: $color-red
+			&.store
+				h2
+					color: $color-blue
+					span
+						color: $color-blue
+						border: 1px $color-blue solid
+				.buy-btn
+					a
+						background-color: $color-blue
+		.detail
+			margin-bottom: 20px
+			h3
+				font-size: 15px
+				line-height: 30px
+				font-weight: bold
+				margin-top: 15px
+			p,
+			li
+				color: $color-text
+				font-size: 14px
+				line-height: 22px
+			li
+				width: 48%
+				display: inline-block
+			.notice
+				font-size: 10px
+				line-height: 13px
+				color: $color-text
+			.list-cont
+				width: 100%
+				h2
+					font-size: 15px
+					line-height: 21px
+					min-height: 84px
+					height: 84px
+			.recommend
+				width: 100%
+				position: relative
+				img
+					width: 100%
+				.point
+					width: 85px
+					height: 72px
+					padding-top: 13px
+					position: absolute
+					top: -40px
+					right: -15px
+					text-align: center
+					color: #fff
+					font-size: 11px
+					line-height: 18px
+					background-color: $color-red
+					+border-radius(50%)
+					b
+						font-size: 25px
+						font-weight: bold
+						padding: 0 3px
 
 #footer
-	background-color: #394166
+	background-color: $base-color
 	color: #fff
 	.link
 		text-align: center

@@ -218,10 +218,10 @@ body {
   background-color: #ece7de;
 }
 .sub-nav li h2 {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 25px;
   top: 12px;
-  padding-left: 20px;
+  padding-left: 17px;
   position: relative;
 }
 .sub-nav li h2:before {
@@ -544,6 +544,192 @@ body {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
+}
+#content .photo-slide {
+  width: 100%;
+  position: relative;
+}
+#content .photo-slide img {
+  width: 100%;
+}
+#content .product-info {
+  width: 270px;
+  position: relative;
+  margin: auto;
+}
+#content .product-info h1 {
+  font-size: 18px;
+  line-height: 25px;
+  color: #8b5c06;
+  font-weight: bold;
+  padding: 10px 0;
+}
+#content .product-info .description {
+  color: #555;
+  font-size: 14px;
+  line-height: 22px;
+}
+#content .product-info .description .store-info li {
+  background-image: url("../img/icon-sub.svg");
+  background-repeat: no-repeat;
+  background-size: 30px 450px;
+  line-height: 30px;
+  padding-left: 30px;
+}
+#content .product-info .description .store-info li.address {
+  background-position: 0 -120px;
+}
+#content .product-info .description .store-info li.phone {
+  background-position: 0 -150px;
+}
+#content .product-info .description .store-info li.hours {
+  background-position: 0 -180px;
+}
+#content .product-info.warning h1 {
+  color: #b72600;
+  font-size: 28px;
+  line-height: 45px;
+}
+#content .product-info.warning .description {
+  color: #b72600;
+}
+#content .product-info hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px #d3d3d3 solid;
+  display: block;
+}
+#content .product-info .fee-info {
+  font-size: 14px;
+  line-height: 22px;
+  margin: 10px 0;
+  padding: 3px 5px;
+  background-color: #ece7de;
+  display: inline-block;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+#content .product-info .fee-info a {
+  color: #b72600;
+  text-decoration: none;
+}
+#content .product-info .price h2 {
+  text-align: right;
+  font-size: 25px;
+  line-height: 40px;
+  font-weight: bold;
+}
+#content .product-info .price h2 span {
+  font-size: 12px;
+  line-height: 18px;
+  display: inline-block;
+  margin: 0 5px;
+  padding: 2px 6px;
+  vertical-align: middle;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+#content .product-info .price .fee-range {
+  float: left;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 45px;
+  color: #8b5c06;
+}
+#content .product-info .price .buy-btn a {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  margin: 10px auto;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+#content .product-info .price.web h2 {
+  color: #b72600;
+}
+#content .product-info .price.web h2 span {
+  color: #b72600;
+  border: 1px #b72600 solid;
+}
+#content .product-info .price.web .buy-btn a {
+  background-color: #b72600;
+}
+#content .product-info .price.store h2 {
+  color: #4258ab;
+}
+#content .product-info .price.store h2 span {
+  color: #4258ab;
+  border: 1px #4258ab solid;
+}
+#content .product-info .price.store .buy-btn a {
+  background-color: #4258ab;
+}
+#content .product-info .detail {
+  margin-bottom: 20px;
+}
+#content .product-info .detail h3 {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+#content .product-info .detail p,
+#content .product-info .detail li {
+  color: #555;
+  font-size: 14px;
+  line-height: 22px;
+}
+#content .product-info .detail li {
+  width: 48%;
+  display: inline-block;
+}
+#content .product-info .detail .notice {
+  font-size: 10px;
+  line-height: 13px;
+  color: #555;
+}
+#content .product-info .detail .list-cont {
+  width: 100%;
+}
+#content .product-info .detail .list-cont h2 {
+  font-size: 15px;
+  line-height: 21px;
+  min-height: 84px;
+  height: 84px;
+}
+#content .product-info .detail .recommend {
+  width: 100%;
+  position: relative;
+}
+#content .product-info .detail .recommend img {
+  width: 100%;
+}
+#content .product-info .detail .recommend .point {
+  width: 85px;
+  height: 72px;
+  padding-top: 13px;
+  position: absolute;
+  top: -40px;
+  right: -15px;
+  text-align: center;
+  color: #fff;
+  font-size: 11px;
+  line-height: 18px;
+  background-color: #b72600;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+#content .product-info .detail .recommend .point b {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 0 3px;
 }
 
 #footer {

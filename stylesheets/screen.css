@@ -55,7 +55,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 html {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {

@@ -57,7 +57,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: #b59e74;
   font-family: helvetica, "LiHei Pro", "Heiti TC", "Microsoft JhengHei";
 }

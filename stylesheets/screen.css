@@ -167,10 +167,10 @@ body {
   height: 40px;
 }
 #header ul.menu-left {
-  left: 5px;
+  left: 0px;
 }
 #header ul.menu-right {
-  right: 5px;
+  right: 0px;
 }
 #header ul li {
   width: 35px;

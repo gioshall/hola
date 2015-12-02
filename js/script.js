@@ -1,3 +1,7 @@
+var dHeight = $( window ).height();
+
+$('#content').css('min-height', dHeight - 213 + 'px')
+
 $('.menu').load('./menu.html');
 
 $('.menu-left .header-menu').click(function(){
@@ -17,4 +21,13 @@ $('.list-pt').click(function(){
 	$('.list-pix').removeClass('selected');
 	$(this).addClass('selected');
 	$('.list-cont').removeClass('pix').addClass('pt');
+});
+
+$(window).scroll(function () {
+    var y = $(window).scrollTop();
+    if (y >= dHeight / 2) {
+        $('body').append('<a href="#" class="gotop"></a>');
+    } else {
+        $('.gotop').remove()
+    }
 });

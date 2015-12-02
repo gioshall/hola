@@ -100,8 +100,14 @@ body
 			height: 30px
 			margin: 5px 0px
 			display: inline-block
+			position: relative
 			background-size: 60px 150px
+			vertical-align: middle
 			+bg(icon-header,svg)
+			a
+				display: block
+				width: 100%
+				height: 100%
 			&.header-menu
 				background-position: 0 0
 				&.show-menu
@@ -114,8 +120,25 @@ body
 				background-position: 0 -60px
 			&.header-order
 				background-position: 0 -90px
+				&.acted
+					background-position: -30px -90px
 			&.header-cart
 				background-position: 0 -120px
+				&.acted
+					background-position: -30px -120px
+			&.cart-items
+				width: 20px
+				height: 20px
+				background-color: $color-red
+				font-size: 11px
+				line-height: 20px
+				text-align: center
+				font-weight: bold
+				color: #fff
+				background-image: none
+				margin: 0 2px 0 -7px
+				+border-radius(50%)
+
 	&.show-search
 		height: 100px
 		+transition(0.2s ease)
@@ -258,6 +281,7 @@ body
 			li
 				display: inline-block
 				width: 48%
+				position: relative
 				a,
 				img
 					width: 100%
@@ -265,6 +289,34 @@ body
 					margin: 0 0 10px 0
 				&:nth-of-type(even)
 					margin: 0 0 10px 4%
+		.hot-list
+			margin-top: 20px
+			li
+				width: 50%
+				border: 1px #fff solid
+				box-sizing: border-box
+				&:nth-of-type(odd),
+				&:nth-of-type(even)
+					margin: 0
+				&:after
+					position: absolute
+					width: 30px
+					height: 30px
+					top: 7px
+					right: 5px
+					content: ''
+					background-size: 30px 450px
+					background-position: 0 -300px
+					opacity: .3
+					+bg(icon-sub,svg)
+				a
+					display: block
+					text-decoration: none
+					background-color: #efefef
+					font-size: 15px	
+					line-height: 45px
+					color: $color-text
+
 	.breadcrumb
 		background-color: #ece7de
 		border-bottom: 1px #e2dfdb solid
@@ -395,7 +447,8 @@ body
 					-webkit-box-orient: vertical
 		&.pt,
 		&.store,
-		&.dm
+		&.dm,
+		&.cart
 			.list-box
 				width: 100%
 				display: block
@@ -453,6 +506,35 @@ body
 					font-size: 13px
 					line-height: 21px
 					color: #000
+		&.cart
+			width: 100%
+			.list-box
+				img
+					width: 30%
+				.item-info
+					width: 65%
+				h2
+					font-size: 13px
+					height: 20px
+					line-height: 20px
+					min-height: 20px
+				.amount
+					font-size: 14px
+					line-height: 22px
+					margin-top: 5px
+					color: $color-text
+			a
+				&.del
+					position: absolute
+					bottom: 2px
+					right: 2px
+					font-size: 12px
+					line-height: 22px
+					padding: 2px 6px
+					background-color: #999
+					text-decoration: none
+					color: #fff
+					+border-radius(2px)
 		&.news,
 		&.coupon
 			.list-box
@@ -484,7 +566,7 @@ body
 			width: 100%
 
 	.product-info
-		width: 270px
+		width: 80%
 		position: relative
 		margin: auto
 		h1
@@ -509,7 +591,12 @@ body
 						background-position: 0 -150px
 					&.hours
 						background-position: 0 -180px
-
+		&.cart
+			h1
+				font-size: 24px
+				line-height: 50px
+				font-weight: normal
+				color: #000
 		&.warning
 			h1
 				color: $color-red
@@ -517,12 +604,16 @@ body
 				line-height: 45px
 			.description
 				color: $color-red
+				a
+					color: $color-red
+
 		hr
 			height: 1px
 			border: 0
 			border-top: 1px #d3d3d3 solid
 			display: block
-		.fee-info
+		.fee-info,
+		.countinue
 			font-size: 14px
 			line-height: 22px
 			margin: 10px 0
@@ -533,6 +624,8 @@ body
 			a
 				color: $color-red
 				text-decoration: none
+		.countinue
+			float: right
 		.price
 			h2
 				text-align: right
@@ -553,6 +646,12 @@ body
 				font-weight: bold
 				line-height: 45px
 				color: $primary-color
+			.price-title
+				float: left
+				font-size: 14px
+				font-weight: bold
+				line-height: 45px
+				color: $color-text
 
 			.buy-btn
 				a
@@ -589,6 +688,14 @@ body
 				line-height: 30px
 				font-weight: bold
 				margin-top: 15px
+				clear: both
+			table
+				margin: 15px auto
+				font-size: 15px
+				line-height: 50px
+				color: $color-text
+				tr
+					border-bottom: 1px #ccc solid
 			p,
 			li
 				color: $color-text
@@ -599,8 +706,8 @@ body
 				display: inline-block
 			.notice
 				font-size: 10px
-				line-height: 13px
-				color: $color-text
+				line-height: 14px
+				color: #777
 			.list-cont
 				width: 100%
 				h2
@@ -637,6 +744,17 @@ body
 			display: block
 			img
 				width: 100%
+
+.gotop
+	display: block
+	position: fixed
+	bottom: 0
+	right: 0
+	width: 50px
+	height: 50px
+	background-color: #eb6f63
+	+bg(icon-footer,svg)
+	z-index: 10
 
 #footer
 	background-color: $base-color

@@ -54,10 +54,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #b59e74;
   font-family: helvetica, "LiHei Pro", "Heiti TC", "Microsoft JhengHei";
 }
@@ -88,7 +92,6 @@ body {
   left: -240px;
   background-color: #b59e74;
   font-size: 18px;
-  overflow-x: hidden;
   overflow-y: auto;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;

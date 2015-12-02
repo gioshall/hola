@@ -70,38 +70,40 @@ body
 				display: block
 
 #header
-	height: 50px
+	height: 60px
 	width: 100%
 	background-color: $primary-color
 	position: fixed
 	overflow: hidden
 	z-index: 10
 	.logo
-		width: 65px
-		height: 50px
+		width: 78px
+		height: 60px
 		position: relative
 		margin: auto
 		a
 			display: block
-			width: 65px
-			height: 50px
-			background-size: 100%
+			width: 78px
+			height: 60px
+			background-size: cover
+			background-position: center
+			background-repeat: no-repeat
 			+bg(logo-hola,png)
 	ul	
 		position: absolute
-		top: 10px
+		top: 15px
 		height: 40px
 		&.menu-left
 			left: 5px
 		&.menu-right
 			right: 5px	
 		li
-			width: 30px
-			height: 30px
-			margin: 5px 0px
+			width: 35px
+			height: 35px
+			margin: 2px 0px
 			display: inline-block
 			position: relative
-			background-size: 60px 150px
+			background-size: 70px 175px
 			vertical-align: middle
 			+bg(icon-header,svg)
 			a
@@ -111,21 +113,21 @@ body
 			&.header-menu
 				background-position: 0 0
 				&.show-menu
-					background-position: -30px 0
+					background-position: -35px 0
 			&.header-search
-				background-position: 0 -30px
+				background-position: 0 -35px
 				&.show-search
-					background-position: -30px -30px
+					background-position: -35px -35px
 			&.header-login
-				background-position: 0 -60px
+				background-position: 0 -70px
 			&.header-order
-				background-position: 0 -90px
+				background-position: 0 -105px
 				&.acted
-					background-position: -30px -90px
+					background-position: -35px -105px
 			&.header-cart
-				background-position: 0 -120px
+				background-position: 0 -140px
 				&.acted
-					background-position: -30px -120px
+					background-position: -35px -140px
 			&.cart-items
 				width: 20px
 				height: 20px
@@ -140,7 +142,7 @@ body
 				+border-radius(50%)
 
 	&.show-search
-		height: 100px
+		height: 110px
 		+transition(0.2s ease)
 		.search
 			height: 50px
@@ -161,7 +163,7 @@ body
 					outline: none
 
 .sub-nav
-	padding-top: 50px
+	padding-top: 60px
 	height: 50px
 	border-bottom: 1px #d7d7d7 solid
 	font-size: 0

@@ -1,6 +1,6 @@
 var dHeight = $( window ).height();
 
-$('#content').css('min-height', dHeight - 213 + 'px')
+$('#content').css('min-height', dHeight - 223 + 'px')
 
 $('.menu').load('./menu.html');
 

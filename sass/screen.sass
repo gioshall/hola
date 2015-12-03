@@ -30,9 +30,9 @@ body
 	top: 0
 	left: -240px
 	background-color: $second-color
-	font-size: 18px
+	overflow-x: hidden
 	overflow-y: auto
-	overflow: scroll
+	overflow-y: scroll
 	-webkit-overflow-scrolling: touch
 	&.show-menu
 		left: 0px
@@ -40,8 +40,13 @@ body
 		text-decoration: none
 		color: #222
 	h3
-		display: inline
+		display: inline-block
 		position: relative
+		color: #222
+		font-size: 18px
+		vertical-align: top
+		&:active
+			background-color: rgba(140,90,5,0.3)
 		&:after
 			+bg(icon-sub,svg)
 			background-size: 25px 375px
@@ -50,25 +55,44 @@ body
 			height: 25px
 			content: ''
 			position: absolute
-			top: -3px
-
-	.back
-		line-height: 60px
+			top: 7px
+			right: 15px
+	.menu-set
+		width: 300%
+		position: relative
+		overflow-x: hidden
+		font-size: 0
+		+transition(0.3s)
+	.back,
+	.cate-title
+		line-height: 50px
 		text-align: center
 		border-bottom: 1px #a07d3d solid
 		h3
 			&:after
 				background-position: 0 -275px
 				left: -25px
+				top: 13px
+	.cate-title
+		font-weight: bold
+		text-align: left
+		h3
+			text-indent: 70px
+			&:after
+				display: none
 	.menu-list
-		margin-top: 10px
 		line-height: 40px
+		display: inline-block
+		vertical-align: top
+		width: 33.33%
+		
 		li
 			a
-				width: 100%
-				text-indent: 80px
+				width: 100%				
 				display: block
-
+			h3
+				width: 100%
+				text-indent: 70px
 #header
 	height: 60px
 	width: 100%
@@ -219,38 +243,6 @@ body
 		a,
 		img
 			width: 100%
-		.highlight-main
-			width: 100%
-			position: relative
-			overflow: hidden
-			.swiper-wrapper
-				position: relative
-				width: 100%
-				height: 100%
-				z-index: 1
-				+display-flex(flex)
-				+transition-property(transform)
-				.swiper-slide
-					position: relative
-					width: 100%
-					height: 100%
-					+flex-shrink(0)
-			.swiper-pagination
-				position: absolute
-				width: 100%
-				text-align: center
-				top: 90%
-				z-index: 10
-				+transition(0.3s)
-				.swiper-pagination-bullet
-					width: 10px
-					height: 10px
-					margin: 5px
-					display: inline-block
-					background: rgba(255,255,255,0.8)
-					+border-radius(50%)
-					&.swiper-pagination-bullet-active
-						background: #fcc80d
 		ul
 			width: 100%
 			font-size: 0
@@ -266,6 +258,40 @@ body
 					margin: 10px 0 0 0
 				&.highlight-sub02
 					margin: 10px 0 0 4%
+	.highlight-main
+		width: 100%
+		position: relative
+		overflow: hidden
+		img
+			width: 100%
+		.swiper-wrapper
+			position: relative
+			width: 100%
+			height: 100%
+			z-index: 1
+			+display-flex(flex)
+			+transition-property(transform)
+			.swiper-slide
+				position: relative
+				width: 100%
+				height: 100%
+				+flex-shrink(0)
+		.swiper-pagination
+			position: absolute
+			width: 100%
+			text-align: center
+			top: 90%
+			z-index: 10
+			+transition(0.3s)
+			.swiper-pagination-bullet
+				width: 10px
+				height: 10px
+				margin: 5px
+				display: inline-block
+				background: rgba(255,255,255,0.8)
+				+border-radius(50%)
+				&.swiper-pagination-bullet-active
+					background: #fcc80d
 	.daily-select
 		width: 100%
 		position: relative

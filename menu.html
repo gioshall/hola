@@ -1,16 +1,67 @@
-<div class="back">
-	<a href="#"><h3>回上一層商品分類</h3></a>
-</div>
-<ul class="menu-list">
-	<li><a href="list.html"><h3>舒眠寢具</h3></a></li>
-	<li><a href="list.html"><h3>品味傢俱</h3></a></li>
-	<li><a href="list.html"><h3>收納層架</h3></a></li>
-	<li><a href="list.html"><h3>生活家電</h3></a></li>
-	<li><a href="list.html"><h3>居家紡品</h3></a></li>
-	<li><a href="list.html"><h3>餐茶玻璃</h3></a></li>
-	<li><a href="list.html"><h3>廚用鍋具</h3></a></li>
-	<li><a href="list.html"><h3>衛浴美體</h3></a></li>
-	<li><a href="list.html"><h3>日用清潔</h3></a></li>
-	<li><a href="list.html"><h3>美食飲品</h3></a></li>
-	<li><a href="list.html"><h3>燈飾擺飾</h3></a></li>
+<div class="menu-set">
+<!-- 1st menu -->
+<ul class="menu-list cate-01">
+	<li><h3>舒眠寢具</h3></li>
+	<li><h3>品味傢俱</h3></li>
+	<li><h3>收納層架</h3></li>
+	<li><h3>生活家電</h3></li>
+	<li><h3>居家紡品</h3></li>
+	<li><h3>餐茶玻璃</h3></li>
+	<li><h3>廚用鍋具</h3></li>
+	<li><h3>衛浴美體</h3></li>
+	<li><h3>日用清潔</h3></li>
+	<li><h3>美食飲品</h3></li>
+	<li><h3>燈飾擺飾</h3></li>
 </ul>
+
+<!-- 2nd menu -->
+<ul class="menu-list cate-02">
+	<div class="back">
+		<h3>回上一層商品分類</h3>
+	</div>
+	<div class="cate-title">
+		<h3>舒眠寢具</h3>
+	</div>
+	<li><h3>品味傢俱</h3></li>
+	<li><h3>收納層架</h3></li>
+	<li><h3>生活家電</h3></li>
+	<li><h3>居家紡品</h3></li>
+	<li><h3>餐茶玻璃</h3></li>
+	<li><h3>廚用鍋具</h3></li>
+	<li><h3>衛浴美體</h3></li>
+	<li><h3>日用清潔</h3></li>
+	<li><h3>美食飲品</h3></li>
+	<li><h3>燈飾擺飾</h3></li>
+</ul>
+
+<!-- 3rd menu -->
+<ul class="menu-list cate-03">
+	<div class="back">
+		<h3>回上一層商品分類</h3>
+	</div>
+	<div class="cate-title">
+		<h3>品味傢俱</h3>
+	</div>
+	<li><a href="list.html"><h3>床包被套組</h3></a></li>
+	<li><a href="list.html"><h3>枕套床包組</h3></a></li>
+	<li><a href="list.html"><h3>涼被枕套組</h3></a></li>
+	<li><a href="list.html"><h3>被套</h3></a></li>
+	<li><a href="list.html"><h3>床包</h3></a></li>
+
+</ul>
+</div>
+
+<script>
+	$('.menu .menu-list.cate-01 h3').click(function(){
+		$('.menu-set').css('transform','translateX(-33.33%)');
+	});
+	$('.menu .menu-list.cate-02 .back').click(function(){
+		$('.menu-set').css('transform','translateX(0)');
+	});
+	$('.menu .menu-list.cate-02 h3').click(function(){
+		$('.menu-set').css('transform','translateX(-66.66%)');
+	});
+	$('.menu .menu-list.cate-03 .back').click(function(){
+		$('.menu-set').css('transform','translateX(-33.33%)');
+	});
+</script>

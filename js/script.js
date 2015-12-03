@@ -24,6 +24,8 @@ $('.list-pt').click(function(){
 	$('.list-cont').removeClass('pix').addClass('pt');
 });
 
+
+
 $(window).scroll(function () {
     var y = $(window).scrollTop();
     if (y >= dHeight / 2) {

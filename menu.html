@@ -74,14 +74,16 @@
 </div>
 
 <script>
+	$('.menu-set').css('height',$('.menu .menu-list.cate-01').height()+'px')
 	function menuMove(e) {
 		var cate = '.menu .menu-list.cate-0';
 		
 		$(cate + e + ' .cate-list, ' + cate + e + ' .inner-menu').click(function() {
-			$('.menu-set').css('transform', 'translateX(' + -33.33 * e + '%)');
+			$('.menu-set').css({'transform':'translateX(' + -33.33 * e + '%)','height': $(cate + (e+1)).height() + 'px'});
 		});
 		$(cate + (e + 1) + ' .back').click(function() {
-			$('.menu-set').css('transform', 'translateX(' + -33.33 * (e - 1) + '%)');
+			//$('.menu-set').css('transform', 'translateX(' + -33.33 * (e - 1) + '%)');
+			$('.menu-set').css({'transform':'translateX(' + -33.33 * (e - 1) + '%)','height': $(cate + e).height() + 'px'});
 		});
 	}
 

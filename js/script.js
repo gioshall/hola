@@ -29,9 +29,9 @@ $('.list-pt').click(function(){
 $(window).scroll(function () {
     var y = $(window).scrollTop();
     if (y >= dHeight / 2) {
-        $('body').append('<a href="#" class="gotop"></a>');
+        $('.gotop').addClass('show');
     } else {
-        $('.gotop').remove()
+        $('.gotop').removeClass('show');
     }
 });
 

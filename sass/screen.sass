@@ -818,7 +818,7 @@ body
 				width: 100%
 
 .gotop
-	display: block
+	opacity: 0
 	position: fixed
 	bottom: 0
 	right: 0
@@ -827,7 +827,12 @@ body
 	background-color: #eb6f63
 	background-size: 40px 160px
 	+bg(icon-footer,svg)
+	+transition(0.2s ease-in)
+	+transform(translateY(40px))
 	z-index: 10
+	&.show
+		opacity: 1
+		+transform(translateY(0px))
 
 #footer
 	background-color: $base-color

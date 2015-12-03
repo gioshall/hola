@@ -1,4 +1,5 @@
 var dHeight = $( window ).height();
+var dWidth = $( window ).width();
 
 $('#content').css('min-height', dHeight - 223 + 'px')
 
@@ -31,3 +32,12 @@ $(window).scroll(function () {
         $('.gotop').remove()
     }
 });
+
+var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+});
+
+
+//console.log(dWidth)
+$('.highlight-main').css('height',dWidth * 0.93 + 'px')

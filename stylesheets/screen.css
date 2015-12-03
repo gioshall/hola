@@ -158,10 +158,13 @@ body {
   display: none;
 }
 .menu .menu-list {
-  line-height: 40px;
+  line-height: 45px;
   display: inline-block;
   vertical-align: top;
   width: 33.33%;
+}
+.menu .menu-list li {
+  border-bottom: 1px #a99063 solid;
 }
 .menu .menu-list li a {
   width: 100%;
@@ -170,6 +173,10 @@ body {
 .menu .menu-list li h3 {
   width: 100%;
   text-indent: 70px;
+}
+.menu .menu-list li.inner-menu {
+  background-color: #a99063;
+  border-bottom: 0px #a99063 solid;
 }
 
 #header {

@@ -35,9 +35,12 @@ $(window).scroll(function () {
 
 var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
-        paginationClickable: true
+        paginationClickable: true,
+        spaceBetween: 10,
+        centeredSlides: true,
+        autoplay: 3000,
+        autoplayDisableOnInteraction: false,
+        loop: true
 });
 
-
-//console.log(dWidth)
 $('.highlight-main').css('height',dWidth * 0.93 + 'px')

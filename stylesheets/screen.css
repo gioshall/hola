@@ -336,6 +336,9 @@ body {
 #content .highlight ul li img {
   width: 100%;
 }
+#content .highlight ul li.highlight-main {
+  width: 100%;
+}
 #content .highlight ul li.highlight-sub01, #content .highlight ul li.highlight-sub02 {
   width: 48%;
 }
@@ -796,6 +799,9 @@ body {
 #content .product-info.warning .description a {
   color: #b72600;
 }
+#content .product-info.warning .description b {
+  font-weight: bold;
+}
 #content .product-info hr {
   height: 1px;
   border: 0;
@@ -894,6 +900,11 @@ body {
   font-weight: bold;
   margin-top: 15px;
   clear: both;
+}
+#content .product-info .detail select {
+  padding: 5px;
+  font-size: 15px;
+  margin: 5px 5px 5px 0;
 }
 #content .product-info .detail table {
   margin: 15px auto;

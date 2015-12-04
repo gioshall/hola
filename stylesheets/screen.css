@@ -220,7 +220,7 @@ body {
   margin: 2px 0px;
   display: inline-block;
   position: relative;
-  background-size: 70px 175px;
+  background-size: 70px 210px;
   vertical-align: middle;
   background-image: url("../img/icon-header.svg");
   background-repeat: no-repeat;
@@ -244,6 +244,9 @@ body {
 }
 #header ul li.header-login {
   background-position: 0 -70px;
+}
+#header ul li.header-logout {
+  background-position: 0 -175px;
 }
 #header ul li.header-order {
   background-position: 0 -105px;

@@ -641,6 +641,25 @@ body
 			color: $primary-color
 			font-weight: bold
 			padding: 10px 0
+		&.rule
+			h1
+				color: $color-red
+			.content
+				font-size: 12px
+				line-height: 19px
+				padding-bottom: 20px
+				color: $color-text
+			.ruleItem
+				font-size: 16px
+				line-height: 25px
+				padding: 15px 0 5px
+				color: $color-red
+			strong
+				display: block
+				font-size: 15px
+				line-height: 30px
+				margin-top: 10px
+				color: #000
 		.description
 			color: $color-text
 			font-size: 14px
@@ -694,7 +713,8 @@ body
 				text-decoration: none
 		.countinue
 			float: right
-		.price
+		.price,
+		.contact
 			h2
 				text-align: right
 				font-size: 25px
@@ -708,18 +728,58 @@ body
 					padding: 2px 6px
 					vertical-align: middle
 					+border-radius(3px)
+			.contact-input
+				text-align: left
+				display: inline-block	
+				font-size: 25px
+				line-height: 40px
+				width: 65%
+				vertical-align: top
+				.notice
+					font-size: 10px
+					line-height: 13px
+					display: block
+					clear: both
+					color: $color-text
+				input
+					height: 20px
+					width: 100%
+					font-size: 15px
+				label
+					font-size: 13px
+					line-height: 20px
+					font-weight: normal
+					display: inline
+					input
+						width: 20px
+						vertical-align: middle
+				&.card
+					font-size: 12px
+					display: block
+					width: 100%
 			.fee-range
 				float: left
 				font-size: 19px
 				font-weight: bold
 				line-height: 45px
 				color: $primary-color
-			.price-title
+			.price-title,
+			.contact-label
 				float: left
 				font-size: 14px
 				font-weight: bold
 				line-height: 45px
 				color: $color-text
+			.contact-label
+				float: none
+				display: inline-block
+				width: 30%
+				text-align: right
+				&.card
+					line-height: 22px	
+					display: block
+					width: 100%
+					text-align: left
 
 			.buy-btn
 				a
@@ -740,6 +800,9 @@ body
 				.buy-btn
 					a
 						background-color: $color-red
+					&.prv
+						a
+							background-color: #999
 			&.store
 				h2
 					color: $color-blue
@@ -780,6 +843,17 @@ body
 				font-size: 10px
 				line-height: 14px
 				color: #777
+				a
+					color: $color-text
+			.invoice
+				font-size: 13px
+				line-height: 25px
+				input[type="text"]
+					width: 90%
+					height: 20px
+					font-size: 15px
+					margin: 5px
+
 			.list-cont
 				width: 100%
 				h2

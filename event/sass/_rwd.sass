@@ -1,0 +1,153 @@
+@media only screen and (max-width: 1200px)
+	.event-section
+		width: 100%
+		.nav
+			ul
+				li
+					font-size: 18px
+		.content
+			.wrapper
+				width: 90%
+			.items
+				li
+					width: 21.5%
+					margin-right: 2%
+					padding: 1%
+					&:last-of-type
+						margin-right: 0
+					&.highlight
+						width: 47%
+				&.more
+					li
+						width: 23.5%
+						height: auto
+			.wrapper
+				&.type-img
+					.items
+						li
+							width: 23.5%
+							height: auto
+							padding: 0
+							&.highlight
+								width: 49%
+						&.more
+							li
+								width: 23.5%
+								height: auto
+
+@media only screen and (max-width: 768px)
+	.event-section
+		.nav
+			padding: 15px 0
+			ul
+				width: 80%
+				margin: auto
+				li
+					margin: 5px 0
+					width: 25%
+					a
+						img
+							width: 100%
+							height: auto
+					&:nth-of-type(4)
+						a
+							border: 0px
+		.content
+			h2
+				text-indent: 20px
+			.items
+				li
+					height: 300px
+					.badge
+						width: 50px
+						height: 50px
+						margin-top: -45px
+						font-size: 12px
+						h4
+							font-size: 25px
+							line-height: 23px
+							span
+								font-size: 18px
+
+@media only screen and (max-width: 568px)
+	.event-section
+		.head
+			.head-desktop
+				display: none
+			.head-mobile
+				display: block
+		.nav
+			padding: 10px 0
+			ul
+				width: 95%
+				margin: auto
+		.content
+			h2
+				font-size: 24px
+				line-height: 50px
+				height: 50px		
+				text-indent: 15px
+				margin: 25px auto 15px
+				.more
+					top: 7.5px
+					right: 7.5px
+			.items
+				li
+					width: 45%
+					height: 320px
+					margin-right: 2%
+					margin-bottom: 10px
+					padding: 2%
+					&:nth-of-type(even)
+						margin-right: 0
+					&.highlight
+						width: 96%
+						height: auto
+						.badge
+							top: 44%
+				&.type-b
+					li
+						&:nth-of-type(even)
+							margin-right: 2%
+						&:nth-of-type(odd)
+							margin-right: 0
+				&.more
+					li
+						width: 49%
+						height: auto
+			.wrapper
+				&.type-img
+					.items
+						li
+							width: 49%
+							height: auto
+							padding: 0
+							&.highlight
+								width: 100%
+						&.more
+							li
+								width: 49%
+								height: auto
+			.gotop
+				right: 10px
+				bottom: 10px
+@media only screen and (max-width: 375px)
+	.event-section
+		.nav
+			ul
+				li
+					font-size: 16px
+					line-height: 30px
+					height: 30px
+		.content
+			.items
+				li
+					height: 300px
+					.price
+						del
+							font-size: 16px
+							line-height: 30px
+						div
+							font-size: 24px
+						span
+							font-size: 13px

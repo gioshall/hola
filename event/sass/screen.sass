@@ -1,0 +1,208 @@
+@import "compass/reset"
+@import "compass/css3"
+
+body
+	margin: 0
+	padding: 0
+	font-family: helvetica, "Heiti TC", "Microsoft JhengHei"
+
+.event-section
+	width: 1200px
+	position: relative
+	margin: auto
+	.head
+		width: 100%
+		.head-desktop,
+		.head-mobile
+			width: 100%
+		.head-desktop
+			display: block
+		.head-mobile
+			display: none
+	.nav
+		position: relative
+		width: 100%
+		background-color: #055384
+		padding: 25px 0
+		ul
+			text-align: center
+			font-size: 0
+			li
+				display: inline-block
+				height: 35px
+				font-size: 22px
+				line-height: 35px
+				width: 12%
+				position: relative
+				a
+					text-decoration: none
+					color: #fff
+					text-align: center
+					display: block
+					border-right: 1px #fff solid
+					width: 100%
+					box-sizing: content-box
+					position: relative
+					img
+						height: 100%
+						display: block
+
+				&:last-of-type
+					a
+						border: 0px
+	.content
+		background-color: #016aae
+		.wrapper
+			width: 1060px
+			margin: auto
+			overflow: auto
+		h2
+			font-size: 36px
+			line-height: 70px
+			height: 70px
+			background-color: #FFF			
+			text-indent: 45px
+			margin: 35px auto 15px
+			position: relative
+			a
+				display: block
+				color: #016aae
+				text-decoration: none
+			.more
+				font-size: 18px
+				color: #fff
+				line-height: 35px
+				height: 35px
+				display: block
+				padding: 0 15px
+				background-color: #a8a8a8
+				position: absolute
+				top: 18px
+				right: 15px
+				text-indent: 0
+				&:hover
+					background-color: #888
+		.wrapper
+			&.type-img
+				h2
+					text-indent: 0
+					overflow: hidden
+					a,
+					img
+						position: relative
+						height: 100%
+						width: auto
+						display: block
+					.more
+						padding: 0 0
+						img
+							height: 100%
+							position: relative
+		.items
+			font-size: 0
+			width: 100%
+			overflow: hidden
+			li
+				display: inline-block
+				width: 230px
+				height: 350px
+				position: relative
+				background-color: #417b31
+				margin-right: 20px
+				vertical-align: top
+				padding: 10px
+				&:last-of-type
+					margin-right: 0
+				&.highlight
+					width: 500px
+				a
+					text-decoration: none
+				h3
+					font-size: 18px
+					line-height: 24px
+					color: #fff
+					margin-top: 10px
+				img
+					width: 100%
+					display: block
+				.price
+					del
+						font-size: 18px
+						line-height: 30px
+						color: #89aa7b
+					div
+						font-size: 30px
+						font-weight: bold
+						color: #fff8c4
+					span
+						font-size: 16px
+						font-weight: normal
+				.badge
+					width: 60px
+					height: 60px
+					float: right
+					position: relative
+					margin-top: -55px
+					margin-right: -5px
+					background-color: #a40000
+					color: #fff
+					text-align: center
+					font-size: 15px
+					font-weight: normal
+					h4
+						font-size: 28px
+						line-height: 28px
+						font-weight: bold
+						margin-top: 6px
+						span
+							font-size: 22px					
+					+border-radius(50%)
+			&.more
+				li
+					width: 250px
+					height: 250px
+					padding: 0
+		.wrapper
+			&.type-img
+				.items
+					li
+						width: 250px
+						padding: 0
+						height: 370px
+						background-color: transparent
+						img
+							width: 100%
+							display: block
+						&.highlight
+							width: 520px
+					&.more
+						li
+							width: 250px
+							height: 250px
+		.notice
+			color: #fff
+			font-size: 13px
+			line-height: 20px
+			margin: 30px 0
+			h4
+				font-size: 15px
+		.gotop
+			width: 50px
+			height: 50px
+			background-color: #999
+			color: #fff
+			position: fixed
+			z-index: 1
+			right: 30px
+			bottom: 30px
+			text-align: center
+			line-height: 50px
+			display: none
+			+border-radius(50%)
+			&.show
+				display: block
+				cursor: pointer
+
+@import rwd
+
+

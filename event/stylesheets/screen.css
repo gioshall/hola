@@ -196,6 +196,7 @@ body {
 .event-section .content .items li h3 {
   font-size: 18px;
   line-height: 24px;
+  min-height: 48px;
   color: #fff;
   margin-top: 10px;
 }
@@ -398,7 +399,7 @@ body {
   }
   .event-section .content .items li {
     width: 45%;
-    height: 320px;
+    height: auto;
     margin-right: 2%;
     margin-bottom: 10px;
     padding: 2%;

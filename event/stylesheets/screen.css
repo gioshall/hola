@@ -173,6 +173,7 @@ body {
   font-size: 0;
   width: 100%;
   overflow: hidden;
+  white-space: nowrap \9;
 }
 .event-section .content .items li {
   display: inline-block;
@@ -199,6 +200,7 @@ body {
   min-height: 48px;
   color: #fff;
   margin-top: 10px;
+  white-space: normal \9;
 }
 .event-section .content .items li img {
   width: 100%;
@@ -226,6 +228,7 @@ body {
   margin-top: -55px;
   margin-right: -5px;
   background-color: #a40000;
+  background: url(../img/bg-badge.png) no-repeat \9;
   color: #fff;
   text-align: center;
   font-size: 15px;
@@ -333,6 +336,13 @@ body {
     height: auto;
   }
 }
+@media only screen and (max-width: 1000px) {
+  .event-section .nav ul li a img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .event-section .nav {
     padding: 15px 0;
@@ -344,10 +354,6 @@ body {
   .event-section .nav ul li {
     margin: 5px 0;
     width: 25%;
-  }
-  .event-section .nav ul li a img {
-    width: 100%;
-    height: auto;
   }
   .event-section .nav ul li:nth-of-type(4) a {
     border: 0px;
